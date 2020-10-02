@@ -14,32 +14,32 @@
  */
 
 Ext.define('Kali.view.Main', {
-    extend: 'Ext.Container',
-    alias: 'widget.main',
+  extend: 'Ext.Container',
+  alias: 'widget.main',
 
-    requires: [
-        'Kali.view.MainViewModel',
-        'Kali.view.Hero',
-        'Kali.view.Devcards',
-        'Ext.Container'
-    ],
+  requires: [
+    'Kali.view.MainViewModel',
+    'Kali.view.Hero',
+    'Kali.view.Devcards',
+    'Ext.Container'
+  ],
 
-    viewModel: {
-        type: 'main'
+  viewModel: {
+    type: 'main'
+  },
+
+  layout: {
+    type: 'card',
+    animation: 'slide',
+    'animation.direction': 'up'
+  },
+  items: [
+    {
+      xtype: 'hero'
     },
-
-    layout: {
-        type: 'card',
-        animation: 'slide',
-        'animation.direction': 'up'
-    },
-    items: [
-        {
-            xtype: 'hero'
-        },
-        {
-            xtype: 'devcards'
-        }
-    ]
+    {
+      xtype: 'devcards'
+    }
+  ]
 
 });

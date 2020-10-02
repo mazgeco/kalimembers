@@ -20,16 +20,18 @@ Ext.Loader.setConfig({
 
 
 Ext.application({
-    views: [
-        'Devcards',
-        'FilterForm',
-        'Hero',
-        'Main'
-    ],
-    name: 'Kali',
+  views: [
+    'Devcards',
+    'FilterForm',
+    'Hero',
+    'Main',
+    'MyDataForm'
+  ],
+  name: 'Kali',
 
-    launch: function() {
-        Ext.create('Kali.view.Main', {fullscreen: true});
-    }
+  launch: function() {
+    Ext.create('Kali.view.Main', {fullscreen: true});
+    BASE_URL = 'http://192.168.100.7';
+  }
 
 });

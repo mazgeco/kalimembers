@@ -6,10 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
-        "container|align": "center",
         "designer|userAlias": "hero",
         "designer|userClassName": "Hero",
-        "layout": "vbox"
+        "layout": "fit"
     },
     "configAlternates": {
         "container|align": "string",
@@ -23,162 +22,289 @@
     "viewModelInstanceId": "b54c5740-4fe5-40e0-9747-4d9e154fc5b7",
     "cn": [
         {
-            "type": "Ext.Component",
+            "type": "Ext.form.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|displayName": "Flex to middle",
-                "layout|flex": 1
+                "id": "frmLogin",
+                "title": "Directorio Kalí - Ankana"
             },
             "configAlternates": {
-                "designer|displayName": "string",
-                "layout|flex": "number"
+                "title": "string",
+                "id": "string"
             },
-            "name": "MyComponent8",
-            "designerId": "9d740484-de31-4acc-94b4-f0afc4d03217"
-        },
-        {
-            "type": "Ext.Component",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "cls": [
-                    "hero-card-title"
-                ],
-                "designer|displayName": "Sencha Devs",
-                "html": "Sencha Devs",
-                "layout|flex": null
-            },
-            "configAlternates": {
-                "cls": "typedarray",
-                "designer|displayName": "string",
-                "html": "string",
-                "layout|flex": "number"
-            },
-            "name": "MyComponent5",
-            "designerId": "26b16487-42de-47a2-9509-94b2b7bf0b05"
-        },
-        {
-            "type": "Ext.Component",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "cls": [
-                    "hero-card-sub-title"
-                ],
-                "designer|displayName": "Sencha Dev Info",
-                "html": "Worldwide Sencha developers database.  Find <b><i>your</i></b> developer here.",
-                "padding": 10
-            },
-            "configAlternates": {
-                "cls": "typedarray",
-                "html": "string",
-                "layout|flex": "number",
-                "designer|displayName": "string",
-                "padding": "auto"
-            },
-            "name": "MyComponent6",
-            "designerId": "08cb799f-8dcb-498b-90bf-9548232e0cfa"
-        },
-        {
-            "type": "Ext.Button",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "iconCls": "x-fa fa-arrow-circle-o-down",
-                "margin": "60 0 0 0",
-                "text": "Get Started"
-            },
-            "configAlternates": {
-                "iconCls": "string",
-                "margin": "auto",
-                "text": "string"
-            },
-            "name": "MyButton3",
-            "designerId": "6b7bceb2-e10d-4242-858a-1e70ce7e649d",
+            "name": "MyFormPanel",
+            "designerId": "ac1d70f8-8d0d-484c-a643-a628adc8fb9a",
             "cn": [
                 {
-                    "type": "fixedfunction",
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyFieldSet",
+                    "designerId": "8817f775-6da0-428b-a1bd-6cc67461bed0",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "usuario",
+                                "label": "Usuario"
+                            },
+                            "configAlternates": {
+                                "id": "string",
+                                "label": "string"
+                            },
+                            "name": "MyTextField",
+                            "designerId": "89a23a3c-c8f7-43ee-a038-d5a9f8d857e5"
+                        },
+                        {
+                            "type": "Ext.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "clave",
+                                "inputType": "password",
+                                "label": "Clave"
+                            },
+                            "configAlternates": {
+                                "id": "string",
+                                "inputType": "string",
+                                "label": "string"
+                            },
+                            "name": "MyTextField1",
+                            "designerId": "2841ae5c-2e5a-48da-9da9-fa2797d6c0c0"
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "fit",
+                                "margin": 15
+                            },
+                            "configAlternates": {
+                                "layout": "string",
+                                "margin": "auto"
+                            },
+                            "name": "MyContainer4",
+                            "designerId": "8d2ebcd7-ed4e-4a3c-8b0a-d447bb506e26",
+                            "cn": [
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconAlign": "right",
+                                        "iconCls": "x-fa fa-sign-in",
+                                        "text": "Ingresar"
+                                    },
+                                    "configAlternates": {
+                                        "iconCls": "string",
+                                        "margin": "auto",
+                                        "text": "string",
+                                        "iconAlign": "string"
+                                    },
+                                    "name": "MyButton3",
+                                    "designerId": "6b7bceb2-e10d-4242-858a-1e70ce7e649d",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "button",
+                                                    "e"
+                                                ],
+                                                "fn": "handler",
+                                                "implHandler": [
+                                                    "var u = Ext.getCmp('usuario').getValue();",
+                                                    "var c = Ext.getCmp('clave').getValue();",
+                                                    "var me = this;",
+                                                    "",
+                                                    "if(u !== null && c !== null && (u.length + 1) > 1 && (c.length + 1) > 1)",
+                                                    "{",
+                                                    "  Ext.Ajax.request",
+                                                    "  ({",
+                                                    "    url: BASE_URL + '/server/servicios/login',",
+                                                    "    method: 'GET',",
+                                                    "    params:{",
+                                                    "      u: u,",
+                                                    "      c: c",
+                                                    "    },",
+                                                    "    callback: function(opt,success,response)",
+                                                    "    {",
+                                                    "      if (success)",
+                                                    "      {",
+                                                    "        var data = Ext.JSON.decode(response.responseText);",
+                                                    "        ID_USUARIO = data.id_usuario;",
+                                                    "        NOMBRE = data.nombre;",
+                                                    "        LOGGED = true;",
+                                                    "        Ext.getCmp('frmLogin').reset();",
+                                                    "        me.up('main').setActiveItem(1);",
+                                                    "      }",
+                                                    "      else",
+                                                    "        Ext.Msg.alert('Error', 'Sus datos están incorrectos o no tiene permiso de acceder a esta aplicación');",
+                                                    "    }",
+                                                    "  });",
+                                                    "}",
+                                                    "else",
+                                                    "{",
+                                                    "  Ext.Msg.alert('Error','Todos los campos son obligatorios');",
+                                                    "}"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "handler",
+                                            "designerId": "97cc2611-024d-4912-8c0c-7b6fa411141b"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Component",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|params": [
-                            "button",
-                            "e"
-                        ],
-                        "fn": "handler",
-                        "implHandler": [
-                            "this.up('main').setActiveItem(1);"
-                        ]
+                        "designer|displayName": "Flex to middle"
                     },
                     "configAlternates": {
-                        "designer|params": "typedarray",
-                        "fn": "string",
-                        "implHandler": "code"
+                        "designer|displayName": "string",
+                        "layout|flex": "number"
                     },
-                    "name": "handler",
-                    "designerId": "97cc2611-024d-4912-8c0c-7b6fa411141b"
+                    "name": "MyComponent8",
+                    "designerId": "9d740484-de31-4acc-94b4-f0afc4d03217"
+                },
+                {
+                    "type": "Ext.Component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "hero-card-title"
+                        ],
+                        "designer|displayName": "Sencha Devs",
+                        "hidden": true,
+                        "html": "Sencha Devs"
+                    },
+                    "configAlternates": {
+                        "cls": "typedarray",
+                        "designer|displayName": "string",
+                        "html": "string",
+                        "layout|flex": "number",
+                        "hidden": "boolean"
+                    },
+                    "name": "MyComponent5",
+                    "designerId": "26b16487-42de-47a2-9509-94b2b7bf0b05"
+                },
+                {
+                    "type": "Ext.Component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "hero-card-sub-title"
+                        ],
+                        "designer|displayName": "Sencha Dev Info",
+                        "hidden": true,
+                        "html": "Worldwide Sencha developers database.  Find <b><i>your</i></b> developer here.",
+                        "padding": 10
+                    },
+                    "configAlternates": {
+                        "cls": "typedarray",
+                        "html": "string",
+                        "layout|flex": "number",
+                        "designer|displayName": "string",
+                        "padding": "auto",
+                        "hidden": "boolean"
+                    },
+                    "name": "MyComponent6",
+                    "designerId": "08cb799f-8dcb-498b-90bf-9548232e0cfa"
+                },
+                {
+                    "type": "Ext.Component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "Flex to middle"
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "layout|flex": "number"
+                    },
+                    "name": "MyComponent7",
+                    "designerId": "cea7b2cc-bcff-4831-8cb2-ff96ed1932b7"
+                },
+                {
+                    "type": "Ext.Component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "dev-count"
+                        ],
+                        "designer|displayName": "Number of devs",
+                        "hidden": true,
+                        "html": [
+                            "<span class=\"dev-count-label\">Devs:</span> <b>{devsCount}<b>"
+                        ],
+                        "padding": 12
+                    },
+                    "configAlternates": {
+                        "html": "binding",
+                        "cls": "typedarray",
+                        "designer|displayName": "string",
+                        "padding": "auto",
+                        "hidden": "boolean"
+                    },
+                    "name": "MyComponent9",
+                    "designerId": "3478b3e7-1096-47b1-a24a-5844a5c4ca16"
                 }
             ]
-        },
-        {
-            "type": "Ext.Component",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|displayName": "Flex to middle",
-                "layout|flex": 1
-            },
-            "configAlternates": {
-                "designer|displayName": "string",
-                "layout|flex": "number"
-            },
-            "name": "MyComponent7",
-            "designerId": "cea7b2cc-bcff-4831-8cb2-ff96ed1932b7"
-        },
-        {
-            "type": "Ext.Component",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "cls": [
-                    "dev-count"
-                ],
-                "designer|displayName": "Number of devs",
-                "html": [
-                    "<span class=\"dev-count-label\">Devs:</span> <b>{devsCount}<b>"
-                ],
-                "padding": 12
-            },
-            "configAlternates": {
-                "html": "binding",
-                "cls": "typedarray",
-                "designer|displayName": "string",
-                "padding": "auto"
-            },
-            "name": "MyComponent9",
-            "designerId": "3478b3e7-1096-47b1-a24a-5844a5c4ca16"
         }
     ]
 }

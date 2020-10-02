@@ -14,61 +14,61 @@
  */
 
 Ext.define('Kali.view.FilterFormViewController', {
-    extend: 'Ext.app.ViewController',
-    alias: 'controller.filterform',
+  extend: 'Ext.app.ViewController',
+  alias: 'controller.filterform',
 
-    /* This function is called using default config which assings configs to all the items */
-    onFilterChange: function() {
-        let devsStore = Ext.first('#devList').getStore(),
-             vm = this.getViewModel(),
-             allFilters = ['extjs', 'touch', 'architect', 'themer', 'inspector'],
-             filters = [];
+  /* This function is called using default config which assings configs to all the items */
+  onFilterChange: function() {
+    let devsStore = Ext.first('#devList').getStore(),
+         vm = this.getViewModel(),
+         allFilters = ['extjs', 'touch', 'architect', 'themer', 'inspector'],
+         filters = [];
 
-        // collect up an array of checked checkboxes
-        Ext.each(allFilters, function(item) {
-            if (vm.get(item)) {
-                filters.push(item);
-            }
+    // collect up an array of checked checkboxes
+    Ext.each(allFilters, function(item) {
+        if (vm.get(item)) {
+            filters.push(item);
+        }
+    });
+
+    // clear any filtering on the Store
+    devsStore.clearFilter();
+
+
+    // filter the developers Store using only the checked filters
+    devsStore.filterBy(function(rec) {
+        let skills = Ext.Array.map(rec.get('skills'), function(item) {
+            return item.toLowerCase().replace(/ /g, '');
         });
 
-        // clear any filtering on the Store
-        devsStore.clearFilter();
+        return Ext.Array.intersect(filters, skills).length;
 
+    });
 
-        // filter the developers Store using only the checked filters
-        devsStore.filterBy(function(rec) {
-            let skills = Ext.Array.map(rec.get('skills'), function(item) {
-                return item.toLowerCase().replace(/ /g, '');
-            });
+  },
 
-            return Ext.Array.intersect(filters, skills).length;
+  onCloseButtonTap: function(button, e, eOpts) {
+    this.getView().hide();
+  },
 
-        });
+  onCheckboxChange4: function(checkbox, newValue, oldValue, eOpts) {
+    this.onFilterChange();
+  },
 
-    },
+  onCheckboxChange3: function(checkbox, newValue, oldValue, eOpts) {
+    this.onFilterChange();
+  },
 
-    onCloseButtonTap: function(button, e, eOpts) {
-        this.getView().hide();
-    },
+  onCheckboxChange2: function(checkbox, newValue, oldValue, eOpts) {
+    this.onFilterChange();
+  },
 
-    onCheckboxChange4: function(checkbox, newValue, oldValue, eOpts) {
-        this.onFilterChange();
-    },
+  onCheckboxChange1: function(checkbox, newValue, oldValue, eOpts) {
+    this.onFilterChange();
+  },
 
-    onCheckboxChange3: function(checkbox, newValue, oldValue, eOpts) {
-        this.onFilterChange();
-    },
-
-    onCheckboxChange2: function(checkbox, newValue, oldValue, eOpts) {
-        this.onFilterChange();
-    },
-
-    onCheckboxChange1: function(checkbox, newValue, oldValue, eOpts) {
-        this.onFilterChange();
-    },
-
-    onCheckboxChange: function(checkbox, newValue, oldValue, eOpts) {
-        this.onFilterChange();
-    }
+  onCheckboxChange: function(checkbox, newValue, oldValue, eOpts) {
+    this.onFilterChange();
+  }
 
 });

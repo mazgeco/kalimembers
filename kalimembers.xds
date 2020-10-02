@@ -7,7 +7,7 @@
             "frameworkVersion": "6.6.0.258"
         },
         "urlPrefixTemplate": "http://localhost:{port}/{path}",
-        "urlPrefix": "http://localhost:56998/",
+        "urlPrefix": "http://localhost:51713/",
         "canvasControls": {
             "viewportSize": {
                 "name": "iPhone",
@@ -18,7 +18,7 @@
             "viewportOrientation": "portrait"
         },
         "exportPath": "",
-        "spacesToIndent": 4,
+        "spacesToIndent": 2,
         "sdkPath": "",
         "lineEnding": "CRLF",
         "genTimestamps": false,
@@ -45,13 +45,16 @@
             "b54c5740-4fe5-40e0-9747-4d9e154fc5b7",
             "d4edd2f0-8447-4f1e-baca-6032039f6337",
             "4ce9ed6a-ab0a-437b-8cd1-6b9d8f34a4c7",
-            "45232693-a3e4-4f6a-9605-a2fbc837e718"
+            "45232693-a3e4-4f6a-9605-a2fbc837e718",
+            "e0169e87-a2d1-495b-b01b-20a492c2ad75",
+            "43b044e7-f70b-4a87-b1fa-4c6a801e864a",
+            "23ecb14e-c7c1-49d0-a1bf-a2fb34409dec"
         ],
         "store": [],
         "controller": [],
         "model": [],
         "resource": [
-            "213cc6c4-ef28-491d-b4db-6c5bf2ed4ef1",
+            "204ea9ed-f2cc-4f70-9cb9-3f3f38e16a22",
             "cc3a5e36-4033-4dee-a016-de29491e130f",
             "26798d47-446f-4a60-83af-464a4cafe69a",
             "3474ad54-a78b-4280-852d-90ab52fc8a94"

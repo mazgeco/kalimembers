@@ -14,110 +14,110 @@
  */
 
 Ext.define('Kali.view.FilterForm', {
-    extend: 'Ext.form.Panel',
-    alias: 'widget.filterform',
+  extend: 'Ext.form.Panel',
+  alias: 'widget.filterform',
 
-    requires: [
-        'Kali.view.FilterFormViewModel',
-        'Kali.view.FilterFormViewController',
-        'Ext.TitleBar',
-        'Ext.Button',
-        'Ext.field.Checkbox'
-    ],
+  requires: [
+    'Kali.view.FilterFormViewModel',
+    'Kali.view.FilterFormViewController',
+    'Ext.TitleBar',
+    'Ext.Button',
+    'Ext.field.Checkbox'
+  ],
 
-    controller: 'filterform',
-    viewModel: {
-        type: 'filterform'
-    },
-    bodyPadding: 8,
+  controller: 'filterform',
+  viewModel: {
+    type: 'filterform'
+  },
+  bodyPadding: 8,
 
-    items: [
+  items: [
+    {
+      xtype: 'titlebar',
+      docked: 'top',
+      title: 'Filter By',
+      items: [
         {
-            xtype: 'titlebar',
-            docked: 'top',
-            title: 'Filter By',
-            items: [
-                {
-                    xtype: 'button',
-                    align: 'right',
-                    iconCls: 'x-fa fa-close',
-                    text: 'Close',
-                    listeners: {
-                        tap: 'onCloseButtonTap'
-                    }
-                }
-            ]
-        },
-        {
-            xtype: 'checkbox',
-            label: 'ExtJS',
-            labelWidth: 100,
-            bind: {
-                checked: '{extjs}'
-            },
-            listeners: {
-                change: {
-                    fn: 'onCheckboxChange4',
-                    delay: 50
-                }
-            }
-        },
-        {
-            xtype: 'checkbox',
-            label: 'Touch',
-            labelWidth: 100,
-            bind: {
-                checked: '{touch}'
-            },
-            listeners: {
-                change: {
-                    fn: 'onCheckboxChange3',
-                    delay: 50
-                }
-            }
-        },
-        {
-            xtype: 'checkbox',
-            label: 'Architect',
-            labelWidth: 100,
-            bind: {
-                checked: '{architect}'
-            },
-            listeners: {
-                change: {
-                    fn: 'onCheckboxChange2',
-                    delay: 50
-                }
-            }
-        },
-        {
-            xtype: 'checkbox',
-            label: 'Themer',
-            labelWidth: 100,
-            bind: {
-                checked: '{themer}'
-            },
-            listeners: {
-                change: {
-                    fn: 'onCheckboxChange1',
-                    delay: 50
-                }
-            }
-        },
-        {
-            xtype: 'checkbox',
-            label: 'Inspector',
-            labelWidth: 100,
-            bind: {
-                checked: '{inspector}'
-            },
-            listeners: {
-                change: {
-                    fn: 'onCheckboxChange',
-                    delay: 50
-                }
-            }
+          xtype: 'button',
+          align: 'right',
+          iconCls: 'x-fa fa-close',
+          text: 'Close',
+          listeners: {
+            tap: 'onCloseButtonTap'
+          }
         }
-    ]
+      ]
+    },
+    {
+      xtype: 'checkbox',
+      label: 'ExtJS',
+      labelWidth: 100,
+      bind: {
+        checked: '{extjs}'
+      },
+      listeners: {
+        change: {
+          fn: 'onCheckboxChange4',
+          delay: 50
+        }
+      }
+    },
+    {
+      xtype: 'checkbox',
+      label: 'Touch',
+      labelWidth: 100,
+      bind: {
+        checked: '{touch}'
+      },
+      listeners: {
+        change: {
+          fn: 'onCheckboxChange3',
+          delay: 50
+        }
+      }
+    },
+    {
+      xtype: 'checkbox',
+      label: 'Architect',
+      labelWidth: 100,
+      bind: {
+        checked: '{architect}'
+      },
+      listeners: {
+        change: {
+          fn: 'onCheckboxChange2',
+          delay: 50
+        }
+      }
+    },
+    {
+      xtype: 'checkbox',
+      label: 'Themer',
+      labelWidth: 100,
+      bind: {
+        checked: '{themer}'
+      },
+      listeners: {
+        change: {
+          fn: 'onCheckboxChange1',
+          delay: 50
+        }
+      }
+    },
+    {
+      xtype: 'checkbox',
+      label: 'Inspector',
+      labelWidth: 100,
+      bind: {
+        checked: '{inspector}'
+      },
+      listeners: {
+        change: {
+          fn: 'onCheckboxChange',
+          delay: 50
+        }
+      }
+    }
+  ]
 
 });

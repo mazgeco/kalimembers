@@ -14,6 +14,6 @@
  */
 
 Ext.define('Kali.view.HeroViewController', {
-    extend: 'Ext.app.ViewController',
-    alias: 'controller.hero'
+  extend: 'Ext.app.ViewController',
+  alias: 'controller.hero'
 });

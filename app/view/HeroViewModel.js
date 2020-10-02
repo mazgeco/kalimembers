@@ -14,11 +14,11 @@
  */
 
 Ext.define('Kali.view.HeroViewModel', {
-    extend: 'Ext.app.ViewModel',
-    alias: 'viewmodel.hero',
+  extend: 'Ext.app.ViewModel',
+  alias: 'viewmodel.hero',
 
-    data: {
-        devsCount: 0
-    }
+  data: {
+    devsCount: 0
+  }
 
 });

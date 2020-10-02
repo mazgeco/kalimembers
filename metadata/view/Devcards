@@ -51,11 +51,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "docked": "top",
-                        "title": "Developers"
+                        "title": "Integrantes",
+                        "titleAlign": "left"
                     },
                     "configAlternates": {
                         "docked": "string",
-                        "title": "string"
+                        "title": "string",
+                        "titleAlign": "string"
                     },
                     "name": "MyTitleBar",
                     "designerId": "819e1760-aefc-425e-a012-1256a470cbea",
@@ -69,8 +71,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "align": "right",
-                                "iconCls": "x-fa fa-filter",
-                                "text": "Filter"
+                                "iconCls": "x-fa fa-filter"
                             },
                             "configAlternates": {
                                 "platformConfig": "object",
@@ -112,6 +113,97 @@
                                     },
                                     "name": "onOpenFilterButtonTap",
                                     "designerId": "a87f73ca-298a-4f93-94a5-4f2901e95560"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "align": "right",
+                                "iconCls": "x-fa fa-user"
+                            },
+                            "configAlternates": {
+                                "align": "string",
+                                "iconCls": "string"
+                            },
+                            "name": "MyButton4",
+                            "designerId": "dd48ee76-a109-45d2-a237-e6e2eb335409",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onMyDataTap",
+                                        "implHandler": [
+                                            "var myData = this.lookupReference('mydata');",
+                                            "myData.show();"
+                                        ],
+                                        "name": "tap",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onMyDataTap",
+                                    "designerId": "4c6db8d6-4471-4c05-b442-0e1da9761393"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "align": "right",
+                                "iconCls": "x-fa fa-sign-out"
+                            },
+                            "configAlternates": {
+                                "align": "string",
+                                "iconCls": "string",
+                                "text": "string"
+                            },
+                            "name": "MyButton3",
+                            "designerId": "efbc7767-8fb5-4e51-99ee-3027968ef577",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onSalir",
+                                        "implHandler": [
+                                            "var devcard = this.getView();",
+                                            "devcard.up('main').setActiveItem(0);"
+                                        ],
+                                        "name": "tap",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onSalir",
+                                    "designerId": "e0c3a714-89f7-47aa-ad29-1c0535cf447e"
                                 }
                             ]
                         }
@@ -232,22 +324,20 @@
             "designerId": "881cddd9-3b1c-47ac-9c66-9714f71732e9",
             "cn": [
                 {
-                    "type": "Ext.Toolbar",
+                    "type": "Ext.TitleBar",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|displayName": "Top Toolbar",
                         "docked": "top"
                     },
                     "configAlternates": {
-                        "designer|displayName": "string",
                         "docked": "string"
                     },
-                    "name": "MyToolbar",
-                    "designerId": "379706a8-1fc2-401b-af10-a36aca7e7651",
+                    "name": "MyTitleBar3",
+                    "designerId": "8738d4b7-c71e-490f-ad14-31e02683bba1",
                     "cn": [
                         {
                             "type": "Ext.Button",
@@ -257,8 +347,8 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "iconCls": "x-fa fa-arrow-left",
-                                "text": "Dev List"
+                                "iconCls": "x-fa fa-long-arrow-left",
+                                "text": "Integrantes"
                             },
                             "configAlternates": {
                                 "iconCls": "string",
@@ -563,6 +653,23 @@
                 }
             ],
             "masterInstanceId": "824cd419-2f22-4f5c-8a10-b49b7a7aa3c3"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "reference": "mydata"
+            },
+            "configAlternates": {
+                "reference": "string"
+            },
+            "name": "mydataform",
+            "designerId": "1388894a-d9ef-4899-ae80-8a661849898b",
+            "masterInstanceId": "e0169e87-a2d1-495b-b01b-20a492c2ad75"
         }
     ]
 }

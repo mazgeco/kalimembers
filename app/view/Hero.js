@@ -14,59 +14,123 @@
  */
 
 Ext.define('Kali.view.Hero', {
-    extend: 'Ext.Container',
-    alias: 'widget.hero',
+  extend: 'Ext.Container',
+  alias: 'widget.hero',
 
-    requires: [
-        'Kali.view.HeroViewModel',
-        'Ext.Button'
-    ],
+  requires: [
+    'Kali.view.HeroViewModel',
+    'Ext.form.Panel',
+    'Ext.form.FieldSet',
+    'Ext.field.Text',
+    'Ext.Button'
+  ],
 
-    viewModel: {
-        type: 'hero'
-    },
+  viewModel: {
+    type: 'hero'
+  },
+  layout: 'fit',
 
-    layout: {
-        type: 'vbox',
-        align: 'center'
-    },
-    items: [
+  items: [
+    {
+      xtype: 'formpanel',
+      id: 'frmLogin',
+      title: 'Directorio Kalí - Ankana',
+      items: [
         {
-            xtype: 'component',
-            flex: 1
-        },
-        {
-            xtype: 'component',
-            cls: 'hero-card-title',
-            html: 'Sencha Devs'
-        },
-        {
-            xtype: 'component',
-            cls: 'hero-card-sub-title',
-            html: 'Worldwide Sencha developers database.  Find <b><i>your</i></b> developer here.',
-            padding: 10
-        },
-        {
-            xtype: 'button',
-            handler: function(button, e) {
-                this.up('main').setActiveItem(1);
+          xtype: 'fieldset',
+          items: [
+            {
+              xtype: 'textfield',
+              id: 'usuario',
+              label: 'Usuario'
             },
-            margin: '60 0 0 0',
-            iconCls: 'x-fa fa-arrow-circle-o-down',
-            text: 'Get Started'
-        },
-        {
-            xtype: 'component',
-            flex: 1
-        },
-        {
-            xtype: 'component',
-            cls: 'dev-count',
-            padding: 12,
-            bind: {
-                html: '<span class="dev-count-label">Devs:</span> <b>{devsCount}<b>'
+            {
+              xtype: 'textfield',
+              id: 'clave',
+              label: 'Clave',
+              inputType: 'password'
+            },
+            {
+              xtype: 'container',
+              margin: 15,
+              layout: 'fit',
+              items: [
+                {
+                  xtype: 'button',
+                  handler: function(button, e) {
+                    var u = Ext.getCmp('usuario').getValue();
+                    var c = Ext.getCmp('clave').getValue();
+                    var me = this;
+
+                    if(u !== null && c !== null && (u.length + 1) > 1 && (c.length + 1) > 1)
+                    {
+                      Ext.Ajax.request
+                      ({
+                        url: BASE_URL + '/server/servicios/login',
+                        method: 'GET',
+                        params:{
+                          u: u,
+                          c: c
+                        },
+                        callback: function(opt,success,response)
+                        {
+                          if (success)
+                          {
+                            var data = Ext.JSON.decode(response.responseText);
+                            ID_USUARIO = data.id_usuario;
+                            NOMBRE = data.nombre;
+                            LOGGED = true;
+                            Ext.getCmp('frmLogin').reset();
+                            me.up('main').setActiveItem(1);
+                          }
+                          else
+                          Ext.Msg.alert('Error', 'Sus datos están incorrectos o no tiene permiso de acceder a esta aplicación');
+                        }
+                      });
+                    }
+                    else
+                    {
+                      Ext.Msg.alert('Error','Todos los campos son obligatorios');
+                    }
+                  },
+                  iconAlign: 'right',
+                  iconCls: 'x-fa fa-sign-in',
+                  text: 'Ingresar'
+                }
+              ]
             }
+          ]
+        },
+        {
+          xtype: 'component'
+        },
+        {
+          xtype: 'component',
+          cls: 'hero-card-title',
+          hidden: true,
+          html: 'Sencha Devs'
+        },
+        {
+          xtype: 'component',
+          cls: 'hero-card-sub-title',
+          hidden: true,
+          html: 'Worldwide Sencha developers database.  Find <b><i>your</i></b> developer here.',
+          padding: 10
+        },
+        {
+          xtype: 'component'
+        },
+        {
+          xtype: 'component',
+          cls: 'dev-count',
+          hidden: true,
+          padding: 12,
+          bind: {
+            html: '<span class="dev-count-label">Devs:</span> <b>{devsCount}<b>'
+          }
         }
-    ]
+      ]
+    }
+  ]
 
 });

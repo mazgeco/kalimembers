@@ -11,7 +11,8 @@
             "Devcards",
             "FilterForm",
             "Hero",
-            "Main"
+            "Main",
+            "MyDataForm"
         ]
     },
     "configAlternates": {
@@ -19,5 +20,27 @@
         "views": "typedarray"
     },
     "name": "Application",
-    "designerId": "application"
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "BASE_URL = 'http://192.168.100.7';"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "launch",
+            "designerId": "0c6c3562-e4d3-4821-866b-abafcbeb7902"
+        }
+    ]
 }

@@ -1,0 +1,313 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "mydataform",
+        "designer|userClassName": "MyDataForm",
+        "layout": "fit"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "layout": "string"
+    },
+    "name": "MyFormPanel1",
+    "designerId": "e0169e87-a2d1-495b-b01b-20a492c2ad75",
+    "viewControllerInstanceId": "23ecb14e-c7c1-49d0-a1bf-a2fb34409dec",
+    "viewModelInstanceId": "43b044e7-f70b-4a87-b1fa-4c6a801e864a",
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top"
+            },
+            "configAlternates": {
+                "docked": "string"
+            },
+            "name": "MyTitleBar2",
+            "designerId": "03b29b1a-6a2a-4acc-9066-b869db7b30ab",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-long-arrow-left",
+                        "text": "Integrantes"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "text": "string"
+                    },
+                    "name": "MyButton5",
+                    "designerId": "04023b8a-751e-44da-b51c-be420f6e00e4",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onBackListTap",
+                                "implHandler": [
+                                    "this.getView().hide();"
+                                ],
+                                "name": "tap",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onBackListTap",
+                            "designerId": "1e330789-229f-462e-814a-b79677ea728d"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "fit"
+            },
+            "configAlternates": {
+                "layout": "string"
+            },
+            "name": "MyContainer8",
+            "designerId": "18cba9b0-8b48-4eb2-8aba-674b55225a02",
+            "cn": [
+                {
+                    "type": "Ext.tab.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyTabPanel1",
+                    "designerId": "823d789f-6d22-42c0-bda1-b32e57884c3e",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-id-card-o"
+                            },
+                            "configAlternates": {
+                                "title": "string",
+                                "iconCls": "string"
+                            },
+                            "name": "MyContainer5",
+                            "designerId": "4578126e-0ea3-46de-9c36-9633cbbdc1d0",
+                            "cn": [
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "html": "<b>Datos generales</b>",
+                                        "margin": "5 0 0 12"
+                                    },
+                                    "configAlternates": {
+                                        "html": "string",
+                                        "margin": "auto"
+                                    },
+                                    "name": "MyLabel",
+                                    "designerId": "21c1fc31-cbf7-447b-94d9-c7948cfbbf93"
+                                },
+                                {
+                                    "type": "Ext.form.FieldSet",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyFieldSet1",
+                                    "designerId": "fb0a3e27-d7b9-4872-ac1c-14989834d979",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "Nombres"
+                                            },
+                                            "configAlternates": {
+                                                "label": "string"
+                                            },
+                                            "name": "MyTextField2",
+                                            "designerId": "c6e20e9d-f2cd-46db-8087-a6c58fa27258"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "Apellidos"
+                                            },
+                                            "configAlternates": {
+                                                "label": "string"
+                                            },
+                                            "name": "MyTextField3",
+                                            "designerId": "ec389d4d-9649-41f3-858b-4184d170f82e"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "Teléfono"
+                                            },
+                                            "configAlternates": {
+                                                "label": "string"
+                                            },
+                                            "name": "MyTextField4",
+                                            "designerId": "7a7a20a0-fd7e-42af-95a7-233e0c9e477f"
+                                        },
+                                        {
+                                            "type": "Ext.field.Date",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "F. nacimiento"
+                                            },
+                                            "configAlternates": {
+                                                "label": "string"
+                                            },
+                                            "name": "MyDate",
+                                            "designerId": "aadf80ce-d876-480f-a238-40595eec555b",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.picker.Date",
+                                                    "reference": {
+                                                        "name": "picker",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "title": "My Panel"
+                                                    },
+                                                    "configAlternates": {
+                                                        "title": "string"
+                                                    },
+                                                    "name": "MyDatePicker",
+                                                    "designerId": "b548b5f9-ab4d-4561-8dc6-d5b7b717b1d1"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.field.File",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "Foto"
+                                            },
+                                            "configAlternates": {
+                                                "label": "string"
+                                            },
+                                            "name": "MyFileField",
+                                            "designerId": "dc373342-6561-43f4-8f8a-c3be71c68a3a"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-id-card"
+                            },
+                            "configAlternates": {
+                                "title": "string",
+                                "iconCls": "string"
+                            },
+                            "name": "MyContainer6",
+                            "designerId": "6d2863cb-09f5-413b-81dc-898dbaf6fde9"
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-shopping-cart"
+                            },
+                            "configAlternates": {
+                                "title": "string",
+                                "iconCls": "string"
+                            },
+                            "name": "MyContainer7",
+                            "designerId": "a004fd0f-2bcd-458f-83a8-413f94c96c19"
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-briefcase"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string"
+                            },
+                            "name": "MyContainer9",
+                            "designerId": "832f9851-42ac-4074-8b6e-16f7faef008f"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

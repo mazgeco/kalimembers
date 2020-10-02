@@ -14,6 +14,6 @@
  */
 
 Ext.define('Kali.view.MainViewController', {
-    extend: 'Ext.app.ViewController',
-    alias: 'controller.main'
+  extend: 'Ext.app.ViewController',
+  alias: 'controller.main'
 });

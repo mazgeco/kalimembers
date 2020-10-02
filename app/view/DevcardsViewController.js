@@ -14,35 +14,45 @@
  */
 
 Ext.define('Kali.view.DevcardsViewController', {
-    extend: 'Ext.app.ViewController',
-    alias: 'controller.devcards',
+  extend: 'Ext.app.ViewController',
+  alias: 'controller.devcards',
 
-    config: {
-        dataChangeCount: 0
-    },
+  config: {
+    dataChangeCount: 0
+  },
 
-    onOpenFilterButtonTap: function(button, e, eOpts) {
-        var filtersMenu = this.lookupReference('filters');
-        filtersMenu.show();
-    },
+  onOpenFilterButtonTap: function(button, e, eOpts) {
+    var filtersMenu = this.lookupReference('filters');
+    filtersMenu.show();
+  },
 
-    onDevTap: function(list, location, eOpts) {
-        let record = location.record;
-        this.getViewModel().set('dev', record);
-        let active = this.getView().animateActiveItem(1, 'slide');
-        if (active.record !== record) {
-            active.down('tabpanel').setActiveItem(0);
-        }
-        active.record = record;
-    },
+  onMyDataTap: function(button, e, eOpts) {
+    var myData = this.lookupReference('mydata');
+    myData.show();
+  },
 
-    onDevListButtonTap: function(button, e, eOpts) {
-        this.getView().animateActiveItem(0, {type: 'slide', direction: 'right'});
-    },
+  onSalir: function(button, e, eOpts) {
+    var devcard = this.getView();
+    devcard.up('main').setActiveItem(0);
+  },
 
-    /* In real app this event should be `load` but we are using inline data store with data config for esier preview  */
-    onStoreDataChange: function(store, eOpts) {
-        Ext.first('hero').getViewModel().set('devsCount', store.getCount());
+  onDevTap: function(list, location, eOpts) {
+    let record = location.record;
+    this.getViewModel().set('dev', record);
+    let active = this.getView().animateActiveItem(1, 'slide');
+    if (active.record !== record) {
+      active.down('tabpanel').setActiveItem(0);
     }
+    active.record = record;
+  },
+
+  onDevListButtonTap: function(button, e, eOpts) {
+    this.getView().animateActiveItem(0, {type: 'slide', direction: 'right'});
+  },
+
+  /* In real app this event should be `load` but we are using inline data store with data config for esier preview  */
+  onStoreDataChange: function(store, eOpts) {
+    Ext.first('hero').getViewModel().set('devsCount', store.getCount());
+  }
 
 });
